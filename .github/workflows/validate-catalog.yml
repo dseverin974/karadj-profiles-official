@@ -1,0 +1,13 @@
+name: validate-catalog
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier la signature Ed25519 (clé publique uniquement)
+        run: openssl pkeyutl -verify -rawin -pubin -inkey catalog-public-key.pem -in catalog.json -sigfile catalog.json.sig
+      - name: Vérifier le schéma et les SHA-256
+        run: python3 tools/validate_catalog.py
