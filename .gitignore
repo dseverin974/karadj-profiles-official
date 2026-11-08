@@ -1,0 +1,5 @@
+*.pem
+!catalog-public-key.pem
+*.key
+*.sig.bak
+.DS_Store
