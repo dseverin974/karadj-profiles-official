@@ -1,0 +1,33 @@
+name: Proposer un profil
+description: Proposer un profil MIDI de contrôleur pour KaraDJ
+title: "[Profil] "
+labels: ["profil"]
+body:
+  - type: input
+    id: name
+    attributes: { label: Nom du contrôleur }
+    validations: { required: true }
+  - type: input
+    id: vendor
+    attributes: { label: Marque }
+    validations: { required: true }
+  - type: input
+    id: device
+    attributes: { label: Appareil (nom MIDI exact) }
+    validations: { required: true }
+  - type: input
+    id: author
+    attributes: { label: Auteur }
+    validations: { required: true }
+  - type: dropdown
+    id: license
+    attributes:
+      label: Licence (SPDX)
+      options: [CC0-1.0, CC-BY-4.0, MIT]
+    validations: { required: true }
+  - type: textarea
+    id: submission
+    attributes:
+      label: Contenu produit par KaraDJ (karadj-midi-profile-submission)
+      description: Collez le JSON ou joignez le fichier. Ne collez rien d'autre.
+    validations: { required: true }
