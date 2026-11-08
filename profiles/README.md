@@ -1,0 +1,1 @@
+Les profils sont des fichiers JSON de données (`karadj-midi-profile`, version 1) placés ici sous `profiles/<id>.json`. Chaque entrée de `catalog.json` donne l'`id`, le `file`, le `sha256` (64 hexadécimaux minuscules) et la `license`. Rien n'est exécutable.
